@@ -1,0 +1,111 @@
+
+body{
+	margin:0;
+	padding:0;
+	font-family: 'Raleway', sans-serif;
+	letter-spacing: 3px;
+
+}
+
+.preload{
+	width:100%;
+	height:100%;
+	background: white;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:1;
+}
+
+.logo
+{
+	width:100%;
+	height:50px;
+	margin:150px auto;
+	font-size:130px;
+	text-shadow: -1px 2px 2px #000;
+	text-align: center;
+	color: #264d73;
+
+;
+}
+
+
+.loader-frame{
+	width:70px;
+	height:70px;
+	margin:auto;
+	position:relative;
+}
+
+.loader1 ,.loader2{
+	position:absolute;
+	border:5px solid transparent;
+	border-radius:50%;
+}
+
+.loader1
+{
+	width:70px;
+	height:70px;
+	border-top:5px solid #264d73;
+	border-bottom:5px solid #264d73;
+	animation:clockwisespin 2s linear 3;
+
+}
+
+.loader2
+{
+	width:60px;
+	height:60px;
+	border-left:5px solid darkturquoise;
+	border-right:5px solid darkturquoise;
+	top:5px;
+	left:5px;
+	animation: anticlockwisespin 2s linear 3;
+}
+
+#progress{
+ 	width:300px;
+ 		margin:0 auto;
+ 		margin-top: -60px;
+ 		margin-bottom:40px;
+ 		text-align: center;
+ 	}
+
+#progressBar{
+	width:1%;
+	height:5px;
+	margin-bottom: 5px;
+	background-color:whitesmoke;
+	animation: moveProgressBar 3s; 
+}
+
+@keyframes clockwisespin
+{
+	from {transform:rotate(0deg);}
+	to {transform:rotate(360deg);}
+
+}
+
+@keyframes anticlockwisespin
+{
+	from {transform:rotate(0deg);}
+	to {transform:rotate(-360deg);}
+	
+}
+
+@keyframes fadeout {
+	from { opacity:1; }
+	to {opacity:0;}
+}
+
+@keyframes moveProgressBar{
+
+	10% { width :10%;  }
+	50% {width :50%;background-color:  #b3cce6;}
+	80% {width:80%; background-color:#6697cc;}
+	100% {width:100%; background-color: #336499;}
+
+}
+
